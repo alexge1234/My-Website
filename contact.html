@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script>document.documentElement.className = "js";</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Alex Germain</title>
+    <meta name="description" content="Get in touch with Alex Germain." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Newsreader:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="wrap nav__inner">
+        <a class="nav__brand" href="index.html">
+          <span class="dot" aria-hidden="true"></span> Alex Germain
+        </a>
+        <button class="nav__toggle" aria-expanded="false" aria-controls="menu">
+          Menu
+        </button>
+        <nav aria-label="Primary">
+          <ul class="nav__links" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+            <li><a class="nav__dl" href="Alex-Germain-Resume.pdf" download>Resume <span aria-hidden="true">&darr;</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section--tight">
+        <div class="wrap">
+          <p class="eyebrow">Contact</p>
+          <h1 class="display">Let's talk.</h1>
+          <p class="lede" style="margin-top: 1.4rem">
+            Open to fully remote B2B marketing roles. The fastest way to reach
+            me is email.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--solid" href="mailto:alexge1234@gmail.com">Email me</a>
+            <a class="btn" href="https://www.linkedin.com/in/alex-germain/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="Alex-Germain-Resume.pdf" download>R&eacute;sum&eacute; &darr;</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap section--tight">
+        <!--
+          ABOUT THIS FORM
+          A static site cannot send email by itself, there is no server behind it.
+          Two ways to make this form actually deliver messages, both free:
+
+          1. EASIEST: leave the mailto button above as your only contact method
+             and delete this whole <form> if you do not want a form.
+
+          2. FREE FORM SERVICE: create a free account at formspree.io (or web3forms.com),
+             paste the endpoint they give you into the form's "action" below,
+             and the form will email submissions to you. No backend to manage.
+             Replace YOUR_FORM_ID with the real id from your account.
+        -->
+        <form
+          class="contact-card reveal"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+        >
+          <label class="field">
+            <span>Your name</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label class="field">
+            <span>Your email</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label class="field">
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="btn btn--solid" type="submit">Send message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <span>Alex Germain &middot; Tampa, FL</span>
+        <span><a href="index.html">Back to home &rarr;</a></span>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
