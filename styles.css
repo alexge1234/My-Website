@@ -1109,3 +1109,226 @@ h3 {
 .mail-card:hover .mail-card__cta {
   color: var(--green-deep);
 }
+
+/* ---- testimonials ---- */
+.quotes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.25rem;
+}
+
+.quote-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper-2);
+  padding: 1.6rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quote-card__mark {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 2.4rem;
+  line-height: 0.5;
+  color: var(--green);
+  height: 1rem;
+}
+
+.quote-card__text {
+  font-family: var(--body);
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0;
+}
+
+.quote-card__who {
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+.quote-card__name {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--ink);
+  display: block;
+}
+
+.quote-card__role {
+  font-family: var(--mono);
+  font-size: 0.71rem;
+  letter-spacing: 0.02em;
+  color: var(--sage);
+  display: block;
+  margin-top: 0.25rem;
+  line-height: 1.45;
+}
+
+/* ---- video embeds ---- */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---- generic bullets inside cards ---- */
+.bullets {
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bullets li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+
+.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+/* ---- testimonials ---- */
+.quotes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.quote {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper-2);
+  padding: 1.5rem 1.5rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.quote blockquote {
+  margin: 0 0 1.1rem;
+  font-size: 1.02rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.quote blockquote::before {
+  content: "\201C";
+  display: block;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 2.4rem;
+  line-height: 0.4;
+  color: var(--green);
+  margin-bottom: 0.5rem;
+}
+
+.quote figcaption {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.quote__name {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.quote__role {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--sage);
+}
+
+/* ---- video gallery ---- */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---- analytics report block ---- */
+.report {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.report__group {
+  padding: 1.3rem 1.4rem;
+  border-top: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+
+.report__group h4 {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--green-deep);
+  margin: 0 0 0.6rem;
+}
+
+.report__group p {
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
