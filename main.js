@@ -33,3 +33,24 @@ if (!prefersReduced && "IntersectionObserver" in window) {
 } else {
   revealEls.forEach((el) => el.classList.add("is-in"));
 }
+
+// Email gallery: scale live previews to fit their card, open full email on click
+function scaleMailFrames() {
+  document.querySelectorAll(".mail-frame").forEach(function (f) {
+    var w = f.parentElement.clientWidth;
+    f.style.transform = "scale(" + w / 600 + ")";
+  });
+}
+window.addEventListener("load", scaleMailFrames);
+window.addEventListener("resize", scaleMailFrames);
+setTimeout(scaleMailFrames, 600);
+
+document.querySelectorAll(".mail-card").forEach(function (card) {
+  card.addEventListener("click", function (e) {
+    e.preventDefault();
+    var frame = card.querySelector(".mail-frame");
+    if (!frame) return;
+    var blob = new Blob([frame.srcdoc], { type: "text/html" });
+    window.open(URL.createObjectURL(blob), "_blank", "noopener");
+  });
+});
